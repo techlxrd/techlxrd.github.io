@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="ios ios-translucent-bars ios-translucent-modals device-pixel-ratio-2 device-ios ios dark">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Outlander's app</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@8.3.0/framework7-bundle.min.css" integrity="sha256-Of6fvKqL4nZiMrsC+3sUiFVVgSNXOf520OfJ6z0omzk=" crossorigin="anonymous">
+    <title>Outland3r2007</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@8.3.4/framework7-bundle.min.css" integrity="sha256-G54tO11H1I9volDPFbhFBVer91FaXMx+MZhIm1qlh5g=" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5.0.5/css/framework7-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,6 +24,7 @@
                         <div class="left"></div>
                         <div class="title">Outland3r2007</div>
                         <div class="right"></div>
+                        <a onclick="shareURL()"><i class="icon f7-icons if-not-md">square_arrow_up</i><i class="material-icons if-md">share</i></a>
                         <div class="title-large">
                             <div class="title-large-text">Outland3r2007</div>
                         </div>
@@ -150,6 +150,17 @@
                             <div class="card-content">
                                 <div class="list media-list no-safe-areas">
                                     <ul>
+                                        <a href="https://irespring.pages.dev" class="external">
+                                            <li class="item-content">
+                                                <div class="item-media"><img src="https://irespring.pages.dev/favicon.ico" width="44" /> </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title-row">
+                                                        <div class="item-title">iRespring</div>
+                                                    </div>
+                                                    <div class="item-subtitle">Respring utility for iOS 12.0 - 15.8.3</div>
+                                                </div>
+                                            </li>
+                                        </a>
                                         <a href="https://trollcheck.pages.dev" class="external">
                                             <li class="item-content">
                                                 <div class="item-media"><img src="https://trollcheck.pages.dev/favicon.ico" width="44" /> </div>
@@ -185,7 +196,7 @@
                                         </a>
                                         <a href="https://appmarkt.pages.dev" class="external">
                                             <li class="item-content">
-                                                <div class="item-media"><img src="https://appmarkt.pages.dev/ios/assets/favicon.ico" width="44" /> </div>
+                                                <div class="item-media"><img src="https://appmarkt.pages.dev/favicon.ico" width="44" /> </div>
                                                 <div class="item-inner">
                                                     <div class="item-title-row">
                                                         <div class="item-title">AppMarket</div>
@@ -200,105 +211,8 @@
                             <center>
                                 <p>I had more projects but I've discontinued them.</p>
                             </center><br></div>
-            </div>
-            <div class="popup" id="settings">
-                <div class="page">
-                    <div class="navbar no-outline">
-                        <div class="navbar-bg"></div>
-                        <div class="navbar-inner">
-                            <div class="title">Settings</div>
-                            <div class="right"><a class="link popup-close">Close</a></div>
-                        </div>
-                    </div>
-                    <div class="page-content">
-                        <div class="list separated media-list inset">
-                            <ul>
-                                <li>
-                                    <div class="item-content">
-                                        <div class="item-media"><img src="assets/favicon.ico"></div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">
-                                                    <script>
-                                                        var u = navigator.userAgent,
-                                                            i = u.match(/(iPhone|iPad|iPod).*? OS (\d+)_?(\d+)?_?(\d+)?/i),
-                                                            I = u.match(/iPad.*? OS (\d+)_?(\d+)?_?(\d+)?/i),
-                                                            m = u.match(/Mac OS X (\d+)[_.](\d+)(?:[_.](\d+))?/i),
-                                                            a = u.match(/Android (\d+)(?:[_.](\d+))?(?:[_.](\d+))?/i),
-                                                            l = u.match(/Linux/i) && !a,
-                                                            w = u.match(/Windows (\d+)(?:[_.](\d+))?/i),
-                                                            iv = i ? i.slice(2).filter(Boolean).join(".") : null,
-                                                            Iv = I ? I.slice(1).filter(Boolean).join(".") : null,
-                                                            mv = m ? m.slice(1).filter(Boolean).join(".") : null,
-                                                            av = a ? a.slice(1).filter(Boolean).join(".") : null,
-                                                            lv = l ? 1 : 0,
-                                                            wv = w ? w.slice(1).filter(Boolean).join(".") : null;
-                                                        iv && document.write("iOS " + iv), Iv && document.write("iPadOS " + Iv), mv && document.write("macOS " + mv), av && document.write("Android " + av), lv && document.write("Linux"), wv && document.write("Windows " + wv)
-                                                    </script>
-                                                </div>
-                                            </div>
-                                            <div style="font-size:12px" class="item-subtitle">
-                                                <script>
-                                                    var mydate = new Date,
-                                                        year = mydate.getYear(),
-                                                        day = mydate.getDay(),
-                                                        month = mydate.getMonth(),
-                                                        daym = mydate.getDate();
-                                                    daym < 10 && (daym = "0" + daym);
-                                                    var dayarray = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"),
-                                                        montharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-                                                    document.write(dayarray[day] + ", " + montharray[month] + " " + daym)
-                                                </script>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a onclick="shareURL()" class="item-link item-content">
-                                        <div class="item-media"><i class="f7-icons">square_arrow_up</i></div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">Share</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="item-link item-content">
-                                        <div class="item-media"><i class="f7-icons">heart_fill</i></div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">Donate</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="list media-list separated inset">
-                            <ul>
-                                <li style="display:flex;align-items:center;justify-content:space-between;padding-left:16px;padding-right:15px">
-                                    <div style="display:flex;align-items:center">
-                                        <div class="item-media"><i class="f7-icons">paintbrush_fill</i></div>
-                                        <div style="padding-left:14px;font-weight:var(--f7-list-media-item-title-font-weight,var(--f7-list-item-title-font-weight,inherit))">Accent color</div>
-                                    </div>
-                                    <div style="margin-top:2px"><input type="color" id="colorPicker" class="color-picker-input" style="display:auto"><label for="colorPicker" class="color-picker-label"><span class="color-picker-indicator" style="background-color:#3e84f6"></span></label></div>
-                                </li>
-                                <li>
-                                    <a onclick="restoreColor()" class="item-link item-content">
-                                        <div class="item-media"><i class="f7-icons">arrow_counterclockwise</i></div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">Restore color</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <script src="https://cdn.jsdelivr.net/npm/framework7@8.3.3/framework7-bundle.min.js"></script>
+            </div>   
+                <script src="https://cdn.jsdelivr.net/npm/framework7@8.3.4/framework7-bundle.min.js" integrity="sha256-3rYMGudduhDtmbZZDWgbNKl+YYb5wXAGn91KZa1GeJY=" crossorigin="anonymous"></script>
                 <script src="./app.js"></script>
                 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
