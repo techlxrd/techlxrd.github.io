@@ -34,6 +34,11 @@ var app = new Framework7({
                     </div>
                 </div>
             `,
+            options: {
+
+            transition: "f7-circle"
+
+        } 
         },
     ],
 });
