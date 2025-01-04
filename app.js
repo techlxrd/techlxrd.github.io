@@ -1,7 +1,7 @@
 var app = new Framework7({
     el: "#app",
     name: "shadvlxrd",
-    theme: "ios",
+    theme: "auto",
     popup: {
         closeOnEscape: true,
         swipeToClose: true,
