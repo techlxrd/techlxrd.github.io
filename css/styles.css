@@ -146,7 +146,8 @@ ion-icon {
 img {
     pointer-events: none;
 }
-
+.source-code{font-size:20px;color:#fff;font-weight:bold;!important}
+.source-code i{font-size:20px;!important}
 .concept-img {
     width: 97%;
     border-radius: 20px;
