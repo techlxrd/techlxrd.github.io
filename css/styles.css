@@ -128,9 +128,9 @@ ion-icon {
     max-width: 100%;
 }
 .page {
-    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #1a5f7a 32px),
-        repeating-linear-gradient(#4fc3f7, #4fc3f7);
-    background-color: #1a5f7a;
+    background-image: url('https://9to5mac.com/wp-content/uploads/sites/6/2025/06/iPadOS_26_Dark.jpg?resize=1536,2048');
+      background-size: cover;
+      background-position: center;
 }
 
 .source-code{font-size:20px;color:#fff;font-weight:bold;!important}
@@ -140,8 +140,8 @@ ion-icon {
 .card {
     background: rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(7px) saturate(180%);
-  -webkit-backdrop-filter: blur(7px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+   backdrop-filter: url(#liquid-filter) blur(1px)!important;
+    -webkit-backdrop-filter: url(#liquid-filter) blur(1px)!important;
   box-shadow:
     0px 0px 0px 2px rgba(255, 255, 255, 0.05) inset,
     0px 0px 100px 10px rgba(255, 255, 255, 0.05) inset,
@@ -214,8 +214,8 @@ body {
 
     .list.separated.glass li {
   background: rgba(255, 255, 255, 0.13)!important;
-  backdrop-filter: blur(7px) saturate(180%);
-  -webkit-backdrop-filter: blur(7px) saturate(180%);
+   backdrop-filter: url(#liquid-filter) blur(1px);
+    -webkit-backdrop-filter: url(#liquid-filter) blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow:
     0px 0px 0px 2px rgba(255, 255, 255, 0.05) inset,
@@ -304,8 +304,8 @@ a {
   padding: 10px 0;
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.13)!important;
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
+   backdrop-filter: url(#liquid-filter) blur(1px)!important;
+    -webkit-backdrop-filter: url(#liquid-filter) blur(1px)!important;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow:
     0px 0px 0px 2px rgba(255, 255, 255, 0.05) inset,
