@@ -1,7 +1,7 @@
 var app = new Framework7({
     el: "#app",
     name: "techlxrd",
-    theme: "auto",
+    theme: "ios",
     popup: {
         closeOnEscape: true,
         swipeToClose: true,
@@ -59,7 +59,6 @@ function initPhotoBrowser(photos) {
     return app.photoBrowser.create({
         photos: photos.map((photo) => ({ url: photo })),
         type: "standalone",
-        theme: "dark",
         navbar: true,
         toolbar: false,
         swiper: {
