@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>TechLxrd</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@8.3.4/framework7-bundle.min.css" integrity="sha256-G54tO11H1I9volDPFbhFBVer91FaXMx+MZhIm1qlh5g=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@9.0.0/framework7-bundle.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5.0.5/css/framework7-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,20 +18,26 @@
     <div id="app">
         <div class="view view-main safe-areas">
             <div class="page">
-                <div class="navbar navbar-large-transparent glass-effect">
+                <div class="navbar navbar-large navbar-transparent">
                     <div class="navbar-bg"></div>
                     <div class="navbar-inner">
-                        <div class="left"></div>
+                        <div class="left hidden"></div>
                         <div class="title">TechLxrd</div>
-                        <div class="right"></div>
+                        <div class="right hidden"></div>
                         <div class="title-large">
                             <div class="title-large-text">TechLxrd</div>
                         </div>
                     </div>
                 </div>
-                <div class="toolbar tabbar-icons toolbar-bottom lamp-tabbar tabbar-highlight liquid-glass">
-                    <div class="toolbar-inner"><a href="#tab-1" class="tab-link tab-link-active"><i class="icon material-icons if-md">info</i><i class="icon f7-icons if-not-md">info_circle_fill</i><span class="tabbar-label">About</span></a><a href="#tab-2" class="tab-link"><i class="icon f7-icons if-not-md">photo_fill</i><i class="icon material-icons md-only">photo_fill</i><span class="tabbar-label">Wallpapers</span></a>
-<a href="#tab-4" class="tab-link"><i class="icon f7-icons if-not-md">rectangle_stack_fill</i><i class="icon material-icons md-only">layers</i><span class="tabbar-label">Projects</span></a></div>
+               <div class="toolbar tabbar tabbar-icons toolbar-bottom searchbar-hide-on-enable"> 
+                    <div class="toolbar-inner">
+                         <div class="toolbar-pane liquid-glass">
+                        <a href="#tab-1" class="tab-link tab-link-active" data-tab-title="Today"><i class="icon f7-icons">house_fill</i><span class="tabbar-label">Home</span></a>
+                        <a href="#tab-2" class="tab-link"><i class="icon f7-icons">photo_fill</i><span class="tabbar-label">Wallpapers</span></a>
+                        <a href="#tab-3" class="tab-link"><i class="icon f7-icons">archivebox_fill</i><span class="tabbar-label">Projects</span></a>
+                        
+                    </div>
+                </div>
                 </div>
                 <div class="tabs-animated-wrap">
                 <div class="tabs">
@@ -44,10 +50,10 @@
                             <center><img src="assets/favicon.ico" class="profile-pic"></center>
                         </div>
                         <div class="block block-title">About me</div>
-                        <div class="block block-strong inset">
+                        <div class="block block-strong inset liquid-glass">
     Hi there! 🌟 I’m a Web Developer 🌐, Designer 🎨, and Music lover 🎵. I’m passionate about coding, design, and technology, especially Huawei 🌸 and Apple 🍎.
                         </div>
-                        <div class="block block-strong inset">"Design is not just what it looks like and feels like. Design is how it works."<br>
+                        <div class="block block-strong inset liquid-glass">"Design is not just what it looks like and feels like. Design is how it works."<br>
                             <p style="float:right">-Steve Jobs</div>
                     
                         <div class="block block-title">Socials & Others</div>
@@ -111,7 +117,7 @@
                         <div id="wallpapers"></div>
                     </div>
                    
-                    <div id="tab-4" class="page-content ptr-content tab" data-ptr-distance="55" data-ptr-mousewheel="true">
+                    <div id="tab-3" class="page-content ptr-content tab" data-ptr-distance="55" data-ptr-mousewheel="true">
                         <div class="ptr-preloader">
       <div class="preloader"></div>
       <div class="ptr-arrow"></div>
@@ -215,8 +221,8 @@
 
     document.body.appendChild(svg);
 })(); </script> 
-<style>.liquid-glass { position: relative; backdrop-filter: url(#liquid-filter) blur(1px); -webkit-backdrop-filter: url(#liquid-filter) blur(1px); background: linear-gradient(145deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%); order: 1px solid rgba(255, 255, 255, 0.25); box-shadow: inset 0 2px 0 0 rgba(255, 255, 255, 0.4), inset 0 -2px 0 0 rgba(0, 0, 0, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.05), 0 20px 40px -10px rgba(0, 0, 0, 0.3); color: white; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); transform: translate3d(0, 0, 0);overflow: hidden;border-radius:5px; }</style>
-                <script src="https://cdn.jsdelivr.net/npm/framework7@8.3.4/framework7-bundle.min.js" integrity="sha256-3rYMGudduhDtmbZZDWgbNKl+YYb5wXAGn91KZa1GeJY=" crossorigin="anonymous"></script>
+<style>.liquid-glass {backdrop-filter: url(#liquid-filter) blur(1px); -webkit-backdrop-filter: url(#liquid-filter) blur(1px); background: linear-gradient(145deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%); order: 1px solid rgba(255, 255, 255, 0.25)!important; box-shadow: inset 0 2px 0 0 rgba(255, 255, 255, 0.4), inset 0 -2px 0 0 rgba(0, 0, 0, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.05), 0 20px 40px -10px rgba(0, 0, 0, 0.3); color: white; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)!important; }.hidden{visibility:hidden;}.toolbar:before{backdrop-filter:blur(0px)!important;mask-image:linear-gradient(to top,#000 calc(50% + var(--f7-safe-area-bottom, 0px)),#0000 100%)}.ios .toolbar:after{background-image:linear-gradient(to top,var(--f7-toolbar-bg-color,var(--f7-bars-bg-color)) var(--f7-safe-area-bottom,0),#0000 100%)}</style>
+                <script src="https://cdn.jsdelivr.net/npm/framework7@9.0.0/framework7-bundle.min.js" crossorigin="anonymous"></script>
                 <script src="./app.js"></script>
                 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
