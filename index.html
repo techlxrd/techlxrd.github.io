@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5.0.5/css/framework7-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/techlxrd/LiquidWeb@latest/liquidweb.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="apple-touch-icon" href="assets/favicon.ico">
 </head>
@@ -185,12 +184,43 @@
                             <center>
                                 <p>I had several other projects, but I have chosen to discontinue them.</p>
                             </center><br></div>
-            </div>   
+            </div>  
+            <script>(function initLiquidGlass() {
+    if (document.getElementById('liquid-filter')) return;
+
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    
+    svg.style.position = "absolute";
+    svg.style.top = "-10000px";
+    svg.style.left = "-10000px";
+    svg.style.width = "1px";
+    svg.style.height = "1px";
+    svg.style.overflow = "hidden";
+
+    svg.innerHTML = `
+      <filter id="liquid-filter" x="-50%" y="-50%" width="200%" height="200%" 
+              filterUnits="objectBoundingBox" 
+              primitiveUnits="userSpaceOnUse" 
+              color-interpolation-filters="sRGB">
+
+        <feTurbulence type="turbulence" baseFrequency="0.01 0.02" numOctaves="2" seed="2" result="turbulence" stitchTiles="noStitch" />
+
+        <feGaussianBlur stdDeviation="2" in="SourceGraphic" result="blur" /> 
+
+        <feDisplacementMap in="blur" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="G" result="final" />
+        
+        </filter>
+    `;
+
+    document.body.appendChild(svg);
+})(); </script> 
+<style>.liquid-glass { position: relative; backdrop-filter: url(#liquid-filter) blur(1px); -webkit-backdrop-filter: url(#liquid-filter) blur(1px); background: linear-gradient(145deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%); order: 1px solid rgba(255, 255, 255, 0.25); box-shadow: inset 0 2px 0 0 rgba(255, 255, 255, 0.4), inset 0 -2px 0 0 rgba(0, 0, 0, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.05), 0 20px 40px -10px rgba(0, 0, 0, 0.3); color: white; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); transform: translate3d(0, 0, 0);overflow: hidden; }</style>
                 <script src="https://cdn.jsdelivr.net/npm/framework7@8.3.4/framework7-bundle.min.js" integrity="sha256-3rYMGudduhDtmbZZDWgbNKl+YYb5wXAGn91KZa1GeJY=" crossorigin="anonymous"></script>
                 <script src="./app.js"></script>
                 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-                <script src="https://cdn.jsdelivr.net/gh/techlxrd/LiquidWeb@latest/liquidweb.js"></script>
+         
 </body>
 
 </html>
