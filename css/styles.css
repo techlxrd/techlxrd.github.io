@@ -32,7 +32,7 @@
     max-width: 100%;
 }
 .page {
-    background-image: url('https://9to5mac.com/wp-content/uploads/sites/6/2025/06/iPadOS_26_Dark.jpg?resize=1536,2048');
+    background-image: url('../assets/background.jpg');
       background-size: cover;
       background-position: center;
 }
@@ -126,15 +126,7 @@ body {
     0 0.5px 0px rgba(255, 255, 255, 0.525) inset;
 }
 
-..list.separated.glass li::before {
-  content: "";
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.25), transparent 70%);
-  mix-blend-mode: screen;
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
+
 
 .list.separated .item-inner:after {
     content: none;
