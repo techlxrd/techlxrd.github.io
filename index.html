@@ -198,97 +198,85 @@
  */
 function isSafariOrAppleDevice() {
     const ua = navigator.userAgent;
-
-    // Check for iOS/iPadOS
+    // Check for iOS/iPadOS devices
     const isIOS = /iPhone|iPad|iPod/.test(ua) && !window.MSStream;
-
     // Check for Safari browser (excluding Chrome/Edge on iOS which spoof Safari)
-    // The Safari browser on Mac desktop often includes 'Safari' but not 'Chrome' or 'CriOS'
-    const isSafariBrowser = /Safari/.test(ua) && !/Chrome|CriOS/.test(ua);
-
+    // We check for 'Safari' and ensure it's not a known Chromium-based browser (Chrome, Edge)
+    const isSafariBrowser = /Safari/.test(ua) && !/Chrome|CriOS|Edg/.test(ua);
     return isIOS || isSafariBrowser;
 }
 
 /**
  * Initializes the liquid glass effect.
- * It uses a CSS backdrop-filter blur as a fallback for Safari/Apple devices
- * due to better performance/compatibility, and the SVG displacement map for other browsers.
- *
- * NOTE: The element(s) you want the effect on MUST have the class '.liquid-glass-target'.
- *
- * @param {string} targetSelector - The CSS selector for the element(s) to apply the effect to (e.g., '.my-card').
+ * If an Apple/Safari device is detected, it injects CSS blur styles inline 
+ * to elements with the class '.liquid-glass' instead of injecting the SVG filter.
  */
-(function initLiquidGlass(targetSelector = '.liquid-glass') {
-    const targets = document.querySelectorAll(targetSelector);
-    if (targets.length === 0) {
-        console.warn(`Liquid Glass: No elements found with selector "${targetSelector}".`);
-        return;
-    }
-
-    // --- Configuration ---
-    const SAFARI_FALLBACK_CLASS = 'safari-blur-fallback';
-    const SVG_EFFECT_CLASS = 'liquid-glass-svg';
-    const SVG_FILTER_ID = 'liquid-filter';
-    // ---------------------
+(function initLiquidGlass() {
+    const TARGET_CLASS_SELECTOR = '.liquid-glass';
 
     if (isSafariOrAppleDevice()) {
-        // --- SAFARI/APPLE FALLBACK LOGIC ---
-        console.log("Liquid Glass: Detected Safari/Apple. Applying CSS backdrop-filter fallback.");
+        console.log("Liquid Glass: Apple/Safari device detected. Injecting CSS blur fallback styles.");
 
-        // Apply the fallback class to all target elements and exit.
-        targets.forEach(el => {
-            el.classList.add(SAFARI_FALLBACK_CLASS);
+        const elements = document.querySelectorAll(TARGET_CLASS_SELECTOR);
+
+        elements.forEach(el => {
+            // Define the complete inline styles, including !important as requested.
+            // Using cssText is the most reliable way to enforce these overrides.
+            const blurStyles = `
+                background: rgba(255, 255, 255, 0.13) !important;
+                backdrop-filter: blur(7px) saturate(180%);
+                -webkit-backdrop-filter: blur(7px) saturate(180%);
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                box-shadow:
+                    0px 0px 0px 2px rgba(255, 255, 255, 0.05) inset,
+                    0px 0px 100px 10px rgba(255, 255, 255, 0.05) inset,
+                    0 0.5px 0px rgba(255, 255, 255, 0.525) inset;
+                /* Crucially, setting filter to none removes the SVG displacement filter */
+                filter: none !important; 
+            `;
+            
+            // Append the styles using cssText to override existing CSS properties on the element.
+            el.style.cssText += blurStyles.trim();
         });
+
+        // Stop execution to prevent the SVG filter from being injected or referenced.
         return;
-
-    } else {
-        // --- STANDARD SVG LIQUID GLASS LOGIC ---
-        console.log("Liquid Glass: Applying standard SVG displacement map filter.");
-
-        // If the SVG filter is already in the DOM, just apply the class and return.
-        if (document.getElementById(SVG_FILTER_ID)) {
-            targets.forEach(el => {
-                el.classList.add(SVG_EFFECT_CLASS);
-            });
-            return;
-        }
-
-        // --- SVG Injection Logic (Original Code) ---
-        const svgNS = "http://www.w3.org/2000/svg";
-        const svg = document.createElementNS(svgNS, "svg");
-
-        // Use the SVG_FILTER_ID variable for consistency
-        if (document.getElementById(SVG_FILTER_ID)) return;
-
-        svg.style.position = "absolute";
-        svg.style.top = "-10000px";
-        svg.style.left = "-10000px";
-        svg.style.width = "1px";
-        svg.style.height = "1px";
-        svg.style.overflow = "hidden";
-
-        svg.innerHTML = `
-          <filter id="${SVG_FILTER_ID}" x="-50%" y="-50%" width="200%" height="200%"
-                  filterUnits="objectBoundingBox"
-                  primitiveUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-
-            <feTurbulence type="turbulence" baseFrequency="0.01 0.02" numOctaves="2" seed="2" result="turbulence" stitchTiles="noStitch" />
-
-            <feGaussianBlur stdDeviation="2" in="SourceGraphic" result="blur" />
-
-            <feDisplacementMap in="blur" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="G" result="final" />
-
-            </filter>
-        `;
-
-        document.body.appendChild(svg);
-
-        // Apply the standard SVG class to targets
-        targets.forEach(el => {
-            el.classList.add(SVG_EFFECT_CLASS);
-        });
     }
+
+    // --- Original SVG Injection Logic (Only runs on non-Apple/Safari devices) ---
+
+    const SVG_FILTER_ID = 'liquid-filter';
+
+    // Prevent double injection
+    if (document.getElementById(SVG_FILTER_ID)) return;
+
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+
+    svg.style.position = "absolute";
+    svg.style.top = "-10000px";
+    svg.style.left = "-10000px";
+    svg.style.width = "1px";
+    svg.style.height = "1px";
+    svg.style.overflow = "hidden";
+
+    svg.innerHTML = `
+      <filter id="${SVG_FILTER_ID}" x="-50%" y="-50%" width="200%" height="200%"
+              filterUnits="objectBoundingBox"
+              primitiveUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+
+        <feTurbulence type="turbulence" baseFrequency="0.01 0.02" numOctaves="2" seed="2" result="turbulence" stitchTiles="noStitch" />
+
+        <feGaussianBlur stdDeviation="2" in="SourceGraphic" result="blur" />
+
+        <feDisplacementMap in="blur" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="G" result="final" />
+
+        </filter>
+    `;
+
+    document.body.appendChild(svg);
+
 })();</script> 
 <style>.liquid-glass {backdrop-filter: url(#liquid-filter) blur(1px); -webkit-backdrop-filter: url(#liquid-filter) blur(1px); background: linear-gradient(145deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%); order: 1px solid rgba(255, 255, 255, 0.25)!important; box-shadow: inset 0 2px 0 0 rgba(255, 255, 255, 0.4), inset 0 -2px 0 0 rgba(0, 0, 0, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.05), 0 20px 40px -10px rgba(0, 0, 0, 0.3); color: white; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)!important; }.hidden{visibility:hidden;}.toolbar:before{backdrop-filter:blur(0px)!important;mask-image:linear-gradient(to top,#000 calc(50% + var(--f7-safe-area-bottom, 0px)),#0000 100%)}.ios .toolbar:after{background-image:linear-gradient(to top,var(--f7-toolbar-bg-color,var(--f7-bars-bg-color)) var(--f7-safe-area-bottom,0),#0000 100%)}.liquid-glass-target.safari-blur-fallback {
   background: rgba(255, 255, 255, 0.13)!important;
@@ -300,11 +288,7 @@ function isSafariOrAppleDevice() {
     0px 0px 100px 10px rgba(255, 255, 255, 0.05) inset,
     0 0.5px 0px rgba(255, 255, 255, 0.525) inset;
 }
-
-.liquid-glass-target.liquid-glass-svg {
-  /* This is the SVG filter application for non-Apple devices */
-  filter: url(#liquid-filter); 
-}</style>
+</style>
                 <script src="https://cdn.jsdelivr.net/npm/framework7@9.0.0/framework7-bundle.min.js" crossorigin="anonymous"></script>
                 <script src="./app.js"></script>
                 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
