@@ -12,9 +12,9 @@
 }
 
 .ios {
-    --f7-theme-color: #b9cefb;    
-    --f7-theme-color-shade: #b9cefb;
-    --f7-theme-color-tint: #b9cefb;
+    --f7-theme-color: #007AFF;    
+    --f7-theme-color-shade: #007AFF;
+    --f7-theme-color-tint: #007AFF;
     --f7-toolbar-height: 46px!important;
   --f7-toolbar-font-size: 14px;
   --f7-tabbar-icons-height: 70px;
@@ -27,6 +27,7 @@
     --f7-theme-color-shade: #b9cefb;
     --f7-theme-color-tint: #b9cefb;
 }
+.item-inner{font-size:auto;color:#fff!important;}
 .page-content {
     max-height: 100%;
     max-width: 100%;
@@ -124,10 +125,6 @@ body {
     border-top-right-radius: 15px;
 }
 
-.card-expandable {
-    border-radius: 23px;
-}
-
 .item-media ion-icon {
     font-size: 27px;
 }
@@ -142,33 +139,10 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
-.button-raised {
-    border-radius: 10px;
-}
 
-.button-large {
-    border-radius: 15px;
-}
 
-.swipe-nav {
-    background: var(--handler-navbar-bg);
-    position: absolute;
-    justify-content: center;
-    -webkit-backdrop-filter: saturate(180%) blur(var(--f7-bars-translucent-blur));
-    z-index: 500;
-    display: flex;
-    height: 17px;
-    width: 100%;
-    backdrop-filter: saturate(180%) blur(var(--f7-bars-translucent-blur));
-    align-items: center;
-}
 
-.swipe-nav i {
-    font-size: 60px;
-    color: gray;
-}
-
-.newsimg {
+.wallpaper {
     width: 300px;
     border-radius: 20px;
     margin-right: 2px;
