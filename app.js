@@ -82,11 +82,11 @@ fetch("wallpapers.json")
         const wallpapersContainer = document.getElementById("wallpapers");
         wallpapers.forEach((wallpaper) => {
             const card = document.createElement("div");
-            card.classList.add("card", "card-raised");
+            card.classList.add("card", "card-raised", "liquid-glass");
             card.innerHTML = `
                 <div class="card-content card-content-padding">
                     <div class="card-image" style="text-align: center;">
-                        <img loading="lazy" class="newsimg" src="${wallpaper.image}" data-caption="${wallpaper.name}">
+                        <img loading="lazy" class="wallpaper" src="${wallpaper.image}" data-caption="${wallpaper.name}">
                     </div>
                     <div class="card-footer">
                         <a onclick="navigator.share({ title: '${wallpaper.name}', url: '${wallpaper.url}' })">
