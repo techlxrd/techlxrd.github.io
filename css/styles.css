@@ -22,7 +22,7 @@
     max-height: 100%;
     max-width: 100%;
 }
-.app {
+.page{
     background-image: url('../assets/background.jpg');
       background-size: cover;
       background-position: center;
