@@ -2,23 +2,13 @@
   --f7-ios-primary: #007AFF;
   --f7-ios-primary-shade: #007AFF;
   --f7-ios-primary-tint: #007AFF;
-  --f7-bars-translucent-blur: 2px;
-  --f7-tabbar-icon-size: 20px;
   --f7-theme-color-rgb: var(--f7-ios-primary);
-  --f7-block-inset-border-radius: 23px;
-  --f7-list-inset-border-radius: 25px;
-  --f7-card-border-radius: 26px !important;
-  --f7-bars-translucent-blur: 4px;
 }
 
 .ios {
     --f7-theme-color: #007AFF;    
     --f7-theme-color-shade: #007AFF;
     --f7-theme-color-tint: #007AFF;
-    --f7-toolbar-height: 46px!important;
-  --f7-toolbar-font-size: 14px;
-  --f7-tabbar-icons-height: 70px;
-  --f7-tabbar-label-font-size: 10px; 
 }
 
 .ios .color-primary,
@@ -32,7 +22,7 @@
     max-height: 100%;
     max-width: 100%;
 }
-.page {
+.app {
     background-image: url('../assets/background.jpg');
       background-size: cover;
       background-position: center;
