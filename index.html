@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
     <title>TechLxrd</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@9.0.0/framework7-bundle.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7@9/framework7-bundle.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5.0.5/css/framework7-icons.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css">
     <link rel="apple-touch-icon" href="assets/favicon.ico">
 </head>
-
 <body>
     <div id="app">
         <div class="view view-main safe-areas">
@@ -24,25 +21,25 @@
                     <div class="navbar-inner">
                         <div class="left hidden"></div>
                         <div class="title">TechLxrd</div>
-                        <div class="right hidden"></div>
+                        <div class="right liquid-glass"> <a onclick="navigator.share({url: 'https://techlord.is-a.dev' })" class="link icon-only"><i class="hgi hgi-stroke hgi-share-03"></i></a></div>
                         <div class="title-large">
                             <div class="title-large-text">TechLxrd</div>
                         </div>
                     </div>
                 </div>
-               <div class="toolbar tabbar tabbar-icons toolbar-bottom searchbar-hide-on-enable"> 
+               <div class="toolbar tabbar tabbar-icons toolbar-bottom"> 
                     <div class="toolbar-inner">
                          <div class="toolbar-pane liquid-glass">
-                        <a href="#tab-1" class="tab-link tab-link-active" data-tab-title="Today"><i class="icon f7-icons">house_fill</i><span class="tabbar-label">Home</span></a>
-                        <a href="#tab-2" class="tab-link"><i class="icon f7-icons">photo_fill</i><span class="tabbar-label">Wallpapers</span></a>
-                        <a href="#tab-3" class="tab-link"><i class="icon f7-icons">archivebox_fill</i><span class="tabbar-label">Projects</span></a>
-                        
+                        <a href="#homeTab" class="tab-link tab-link-active" data-tab-title="TechLxrd"><i class="icon hgi hgi-stroke hgi-home-02"></i><span class="tabbar-label">Home</span></a>
+                        <a href="#contactTab" class="tab-link" data-tab-title="Contact"><i class="icon hgi hgi-stroke hgi-contact-01"></i><span class="tabbar-label">Contact</span></a>
+                         <a href="#shopTab" class="tab-link" data-tab-title="Shop"><i class="icon hgi hgi-stroke hgi-store-04"></i><span class="tabbar-label">Shop</span></a>
+                        <a href="#projectsTab" class="tab-link" data-tab-title="My Projects"><i class="icon hgi hgi-stroke hgi-stars"></i><span class="tabbar-label">My Projects</span></a>
                     </div>
                 </div>
                 </div>
                 <div class="tabs-animated-wrap">
                 <div class="tabs">
-                    <div id="tab-1" class="page-content ptr-content tab tab-active hide-bars-on-scroll" data-ptr-distance="55" data-ptr-mousewheel="true"> 
+                    <div id="homeTab" class="page-content ptr-content ptr-tab tab tab-active" data-ptr-distance="55" data-ptr-mousewheel="true"> 
                         <div class="ptr-preloader">
       <div class="preloader"></div>
       <div class="ptr-arrow"></div>
@@ -52,57 +49,70 @@
                         </div>
                         <div class="block block-title">About me</div>
                         <div class="block block-strong inset liquid-glass">
-    Hi there! 🌟 I’m a Web Developer 🌐, Designer 🎨 and Music lover 🎵. I’m passionate about coding, design, and technology, especially Huawei 🌸 and Apple 🍎.
-                        </div>
+I’m a web developer, designer, and video editor with a strong interest in technology and digital experiences. I started coding at 14 and have been building and refining my skills ever since.
+I specialize in custom Framework7 applications, focusing on performance, usability, and clean, modern design. I pay attention to detail to make sure everything feels smooth and intuitive.
+Inspired by the design philosophies of Huawei and Apple, I aim to create work that is simple, polished, and effective.                        </div>
                         <div class="block block-strong inset liquid-glass">"Design is not just what it looks like and feels like. Design is how it works."<br>
-                            <p style="float:right">-Steve Jobs</div>
+                            <p style="float:right">-Steve Jobs</p>
+                        </div>
                     
                         <div class="block block-title">Socials & Others</div>
                         <div class="list separated glass media-list inset">
                             <ul>
                                 <li class="liquid-glass">
                                     <a href="https://x.com/TechLxrd07" class="item-link item-content external">
-                                        <div class="item-media"><i class="icon f7-icons">logo_twitter</i></div>
+                                        <div class="item-media"><i class="icon hgi hgi-stroke hgi-new-twitter"></i></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
-                                                <div class="item-title">Twitter</div>
+                                                <div class="item-title mt-5">Twitter/X</div>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
-                                                                <li class="liquid-glass">
-                                    <a href="https://buymeacoffee.com/techlxrd07" class="item-link item-content external">
-                                        <div class="item-media"><i class="bi bi-cup-hot-fill"></i></div>
+                                <li class="liquid-glass">
+                                    <a href="https://www.threads.com/@techlxrd07" class="item-link item-content external">
+                                        <div class="item-media"><i class="icon hgi hgi-stroke hgi-at"></i></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
-                                                <div class="item-title">BuyMeACoffee</div>
+                                                <div class="item-title mt-5">Threads</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>   
+                                                             
+                                                                <li class="liquid-glass">
+                                    <a href="https://buymeacoffee.com/techlxrd07" class="item-link item-content external">
+                                        <div class="item-media"><i class="hgi hgi-stroke hgi-coffee-01"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row mt-5">
+                                                <div class="item-title">Buy me a coffee</div>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="liquid-glass">
                                     <a href="https://www.reddit.com/user/Outland3r2007/" class="item-link item-content external">
-                                        <div class="item-media"><ion-icon name="logo-reddit"></ion-icon></div>
+                                        <div class="item-media"><i class="hgi hgi-stroke hgi-reddit"></i></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
-                                                <div class="item-title">Reddit</div>
+                                                <div class="item-title mt-5">Reddit</div>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="liquid-glass">
-                                    <a href="https://x.com/TechLxrd07" class="item-link item-content external">
-                                        <div class="item-media"><i class="icon f7-icons">bag_fill</i></div>
+                                    <a href="https://techlxrd.gumroad.com" class="item-link item-content external">
+                                        <div class="item-media"><i class="hgi hgi-stroke hgi-store-04"></i></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
-                                                <div class="item-title">Gumroad</div>
+                                                <div class="item-title mt-5">Gumroad</div>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li class="liquid-glass">
                                     <a href="https://youtube.com/@TechLXRD07" class="item-link item-content external">
-                                        <div class="item-media"><i class="icon f7-icons">play_rectangle_fill</i></div>
+                                        <div class="item-media"><i class="hgi hgi-stroke hgi-youtube"></i></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">YouTube</div>
@@ -112,188 +122,209 @@
                                 </li>
                                 <li class="liquid-glass">
                                     <a href="https://github.com/TechLxrd" class="item-link item-content external">
-                                        <div class="item-media"><i class="icon f7-icons">logo_github</i></div>
+                                        <div class="item-media"><i class="hgi hgi-stroke hgi-github-01"></i></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
-                                                <div class="item-title">GitHub</div>
+                                                <div class="item-title mt-5">GitHub</div>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
-                            
-                          
-                            </ul>                            
-                           <center><a href="https://github.com/techlxrd/techlxrd.github.io" class="source-code external">Source code<i class="f7-icons">logo_github</i></a></center>
+                            </ul>  
+                            <br>                          
+                           <center><a href="https://github.com/techlxrd/techlxrd.github.io" class="source-code external">Source code</a></center>
                         </div>
                     </div>
-                    <div id="tab-2" class="page-content ptr-content tab" data-ptr-distance="55" data-ptr-mousewheel="true">
+                    <div id="contactTab" class="page-content ptr-content ptr-tab tab" data-ptr-distance="55" data-ptr-mousewheel="true">
                         <div class="ptr-preloader">
       <div class="preloader"></div>
       <div class="ptr-arrow"></div>
     </div>
                         <div class="list separated glass inset">
                             <ul></ul>
-                        </div>
-                        <div class="block block-title">Wallpapers</div>
-                        <div id="wallpapers"></div>
-                    </div>
+                        </div>                    
+<form action="https://formsubmit.co/ajax/b8a70ec94b2630e768afef32c38d87ba" method="POST" class="list inset separated glass contact-form" id="contact-form">
+  <input type="text" name="_honey" class="display-none" tabindex="-1" autocomplete="off">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="New contact form message">
+
+<ul id="contact-list">
+  <li class="liquid-glass">
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Name</div>
+        <div class="item-input-wrap">
+          <input type="text" name="Name" placeholder="Tech Lord" required>
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <li class="liquid-glass">
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Email</div>
+        <div class="item-input-wrap">
+          <input type="email" name="Email" placeholder="example@example.com" required>
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <li class="liquid-glass">
+    <a href="#" class="item-link smart-select smart-select-init" data-open-in="popover">
+      <select name="Request type" id="request-type" required>
+        <option value="" disabled selected>Select</option>
+        <option value="general">General contact</option>
+        <option value="icon">App icon design</option>
+        <option value="video">Application trailer</option>
+        <option value="f7">Framework7 app</option>
+      </select>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title">Request</div>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="liquid-glass extra-field">
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Project name</div>
+        <div class="item-input-wrap">
+          <input type="text" name="Project" placeholder="SoftwareKit">
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <li class="liquid-glass extra-field">
+    <a href="#" class="item-link smart-select smart-select-init" data-open-in="popover">
+      <select name="Budget">
+        <option disabled selected>Select budget</option>
+        <option>Not sure yet</option>
+        <option>Under €100</option>
+        <option>€100–€300</option>
+        <option>€300+</option>
+      </select>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title">Budget</div>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  <li class="liquid-glass extra-field">
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Deadline</div>
+        <div class="item-input-wrap">
+          <input type="text" name="Deadline" placeholder="2-4 weeks">
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="liquid-glass">
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Message</div>
+        <div class="item-input-wrap">
+          <textarea name="Message" id="message-field" required></textarea>
+        </div>
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+  <br>
+
+  <button id="submit-btn" type="submit" class="button button-fill button-large button-round button-preloader liquid-glass">
+    <span class="preloader"></span>
+    <span>Send message</span>
+  </button>
+</form>
+
+                          </div>
+               
                    
-                    <div id="tab-3" class="page-content ptr-content tab" data-ptr-distance="55" data-ptr-mousewheel="true">
+                    <div id="shopTab" class="page-content ptr-content ptr-shop tab" data-ptr-distance="55" data-ptr-mousewheel="true">
+                        <div class="ptr-preloader">
+      <div class="preloader"></div>
+      <div class="ptr-arrow"></div>
+    </div>                                                                        
+<div class="block shop-section">
+  <div id="shop-grid" class="row shop-grid"></div>
+</div>
+</div>
+<div id="projectsTab" class="page-content ptr-content ptr-tab tab">
                         <div class="ptr-preloader">
       <div class="preloader"></div>
       <div class="ptr-arrow"></div>
     </div>
-                        <div class="card liquid-glass">
-                            <div class="card-header">Projects</div>
-                            <div class="card-content">
-                                <div class="list media-list" style="font-size:auto;color:#fff;">
-                                    <ul>
-                                        <a href="https://irespring.pages.dev" class="external">
-                                            <li class="item-content">
-                                                <div class="item-media"><img src="https://irespring.pages.dev/favicon.ico" width="44" /> </div>
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">iRespring</div>
-                                                    </div>
-                                                    <div class="item-subtitle">Respring utility for iOS 12.0 - 15.8.3</div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="https://trollcheck.pages.dev" class="external">
-                                            <li class="item-content">
-                                                <div class="item-media"><img src="https://trollcheck.pages.dev/favicon.ico" width="44" /> </div>
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">TrollCheck</div>
-                                                    </div>
-                                                    <div class="item-subtitle">TrollStore compatibility checker</div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="https://harmonyicons.pages.dev" class="external">
-                                            <li class="item-content">
-                                                <div class="item-media"><img src="https://harmonyicons.pages.dev/files/favicon.ico" width="44" /> </div>
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">HarmonyIcons</div>
-                                                    </div>
-                                                    <div class="item-subtitle">HarmonyOS Icons font for the web</div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="https://softwarekit.pages.dev" class="external">
-                                            <li class="item-content">
-                                                <div class="item-media"><img src="https://softwarekit.pages.dev/favicon.png" width="44" /> </div>
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">SoftwareKit</div>
-                                                    </div>
-                                                    <div class="item-subtitle"></div>
-                                                </div>
-                                                
-                                            </li>
-                                        </a>
-                                        <a href="https://liquidstyle.pages.dev" class="external">
-                                            <li class="item-content">
-                                                <div class="item-media"><img src="assets/favicon.ico" width="44" /> </div>
-                                                <div class="item-inner">
-                                                    <div class="item-title-row">
-                                                        <div class="item-title">LiquidStyle</div>
-                                                    </div>
-                                                    <div class="item-subtitle">iOS Liquid Glass for the web</div>
-                                                </div>
-                                                
-                                            </li>
-                                        </a>
-                                    </ul>
+                                <div class="list glass separated media-list inset">
+<ul>
+  <li class="liquid-glass">
+    <a href="https://irespring.pages.dev" class="item-link item-content external">
+      <div class="item-media"><img src="https://irespring.pages.dev/favicon.ico" width="44" loading="lazy"></div>
+      <div class="item-inner">
+        <div class="item-title-row"><div class="item-title">iRespring</div></div>
+        <div class="item-subtitle">Respring utility for iOS 12.0 - 15.8.7</div>
+      </div>
+    </a>
+  </li>
+
+  <li class="liquid-glass">
+    <a href="https://trollcheck.pages.dev" class="item-link item-content external">
+      <div class="item-media"><img src="https://trollcheck.pages.dev/favicon.ico" width="44" loading="lazy"></div>
+      <div class="item-inner">
+        <div class="item-title-row"><div class="item-title">TrollCheck</div></div>
+        <div class="item-subtitle">TrollStore compatibility checker</div>
+      </div>
+    </a>
+  </li>
+
+  <li class="liquid-glass">
+    <a href="https://harmonyicons.pages.dev" class="item-link item-content external">
+      <div class="item-media"><img src="https://harmonyicons.pages.dev/files/favicon.ico" width="44" loading="lazy"></div>
+      <div class="item-inner">
+        <div class="item-title-row"><div class="item-title">HarmonyIcons</div></div>
+        <div class="item-subtitle">HarmonyOS Icons font for the web</div>
+      </div>
+    </a>
+  </li>
+
+  <li class="liquid-glass">
+    <a href="https://swkit.app" class="item-link item-content external">
+      <div class="item-media"><img src="https://softwarekit.pages.dev/favicon.png" loading="lazy"></div>
+      <div class="item-inner">
+        <div class="item-title-row"><div class="item-title">SoftwareKit</div></div>
+        <div class="item-subtitle">A better way to manage your iPhone and Mac
+</div>
+      </div>
+    </a>
+  </li>
+
+  <li class="liquid-glass">
+    <a href="https://liquidstyle.pages.dev" class="item-link item-content external">
+      <div class="item-media"><img src="assets/favicon.ico" width="44" loading="lazy"></div>
+      <div class="item-inner">
+        <div class="item-title-row"><div class="item-title">LiquidStyle</div></div>
+        <div class="item-subtitle">iOS Liquid Glass for Chromium</div>
+      </div>
+    </a>
+  </li>
+</ul>
                                 </div>
                             </div>
                             </div>
             </div> 
-            <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="techlxrd07" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="80"></script> 
-            <script>
-function isSafariOrAppleDevice() {
-    const ua = navigator.userAgent;
-   
-    const isIOS = /iPhone|iPad|iPod/.test(ua) && !window.MSStream;
-    
-    
-    const isSafariBrowser = /Safari/.test(ua) && !/Chrome|CriOS|Edg/.test(ua);
-    return isIOS || isSafariBrowser;
-}
-
-(function initLiquidGlass() {
-    const TARGET_CLASS_SELECTOR = '.liquid-glass';
-
-    if (isSafariOrAppleDevice()) {
-        console.log("Liquid Glass: Apple/Safari device detected. Injecting CSS blur fallback styles.");
-
-        const elements = document.querySelectorAll(TARGET_CLASS_SELECTOR);
-
-        elements.forEach(el => {
-           
-            
-            const blurStyles = `
-                background: rgba(255, 255, 255, 0.13) !important;
-                backdrop-filter: blur(7px) saturate(180%)!important;
-                -webkit-backdrop-filter: blur(7px) saturate(180%)!important;
-                border: 1px solid rgba(255, 255, 255, 0.25)!important;
-                box-shadow:
-                    0px 0px 0px 2px rgba(255, 255, 255, 0.05) inset,
-                    0px 0px 100px 10px rgba(255, 255, 255, 0.05) inset,
-                    0 0.5px 0px rgba(255, 255, 255, 0.525) inset !important;
-                
-                filter: none !important; 
-            `;
-            
-            
-            el.style.cssText += blurStyles.trim();
-        });
-
-       
-        return;
-    }
-
-   
-
-    const SVG_FILTER_ID = 'liquid-filter';
-
-    
-    if (document.getElementById(SVG_FILTER_ID)) return;
-
-    const svgNS = "http://www.w3.org/2000/svg";
-    const svg = document.createElementNS(svgNS, "svg");
-
-    svg.style.position = "absolute";
-    svg.style.top = "-10000px";
-    svg.style.left = "-10000px";
-    svg.style.width = "1px";
-    svg.style.height = "1px";
-    svg.style.overflow = "hidden";
-
-    svg.innerHTML = `
-      <filter id="${SVG_FILTER_ID}" x="-50%" y="-50%" width="200%" height="200%"
-              filterUnits="objectBoundingBox"
-              primitiveUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB">
-
-        <feTurbulence type="turbulence" baseFrequency="0.01 0.02" numOctaves="2" seed="2" result="turbulence" stitchTiles="noStitch" />
-
-        <feGaussianBlur stdDeviation="2" in="SourceGraphic" result="blur" />
-
-        <feDisplacementMap in="blur" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="G" result="final" />
-
-        </filter>
-    `;
-
-    document.body.appendChild(svg);
-
-})();</script> 
-<style>.liquid-glass {backdrop-filter: url(#liquid-filter) blur(1px)!important; -webkit-backdrop-filter: url(#liquid-filter) blur(1px)!important; background: linear-gradient(145deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%); order: 1px solid rgba(255, 255, 255, 0.25)!important; box-shadow: inset 0 2px 0 0 rgba(255, 255, 255, 0.4), inset 0 -2px 0 0 rgba(0, 0, 0, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.05), 0 20px 40px -10px rgba(0, 0, 0, 0.3); color: white; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)!important; }.hidden{visibility:hidden;}.toolbar:before{backdrop-filter:blur(0px)!important;}</style>
-                <script src="https://cdn.jsdelivr.net/npm/framework7@9.0.0/framework7-bundle.min.js" crossorigin="anonymous"></script>
+            <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="techlxrd07" data-description="Support me on Buy me a coffee!" data-message=""  data-position="Right" data-x_margin="18" data-y_margin="85"></script>  
+                <script src="https://cdn.jsdelivr.net/npm/framework7@9/framework7-bundle.min.js" crossorigin="anonymous"></script>
                 <script src="./app.js"></script>
-                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
          
 </body>
 

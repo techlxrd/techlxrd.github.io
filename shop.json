@@ -1,0 +1,83 @@
+[
+  {
+    "title": "SWKit Templates Bundle",
+    "subtitle": "The full bundle of SoftwareKit Template Source Code",
+    "url": "https://techlxrd.gumroad.com/l/swkit",
+    "image": "https://public-files.gumroad.com/uit8elchzaw6ekuni4z0tjzzijhe",
+    "price": "€80+",
+    "badgeColor": "orange",
+    "tags": ["Bundle", "Web Templates", "Framework7", "iWebKit 6"]
+  },
+  {
+    "title": "SWKit iOS Framework7 Template",
+    "subtitle": "A fully functional iOS application built in Framework7.",
+    "url": "https://techlxrd.gumroad.com/l/swkitiosf7?layout=profile",
+    "image": "https://public-files.gumroad.com/qsl4cnqxchz55dnkw0ogocadwurj",
+    "price": "€60+",
+    "badgeColor": "green",
+    "tags": ["iOS", "Framework7", "Web Application"]
+  },
+  {
+    "title": "SWKit Android Template",
+    "subtitle": "A fully functional Android application built in Framework7.",
+    "url": "https://techlxrd.gumroad.com/l/swkitandroidf7?layout=profile",
+    "image": "https://public-files.gumroad.com/wrtzn21gb4pjzslc5njuui83wsig",
+    "price": "€30+",
+    "badgeColor": "green",
+    "tags": ["Android", "Framework7", "Web Application"]
+  }, 
+    {
+    "title": "SWKit Legacy Template",
+    "subtitle": "A Legacy iOS application built in iWebKit 6.",
+    "url": "https://techlxrd.gumroad.com/l/swkitiwebkit6?layout=profile",
+    "image": "https://public-files.gumroad.com/ggyqz02en3vs8a4lyuod6gtlwgc0",
+    "price": "€10+",
+    "badgeColor": "green",
+    "tags": ["iOS", "iWebKit 6", "Web Application", "Legacy iOS"]
+  }, 
+    {
+    "title": "SWKit HarmonyOS Template",
+    "subtitle": "A HarmonyOS application built in Framework7.    ",
+    "url": "https://techlxrd.gumroad.com/l/swkithmosf7?layout=profile",
+    "image": "https://public-files.gumroad.com/f7nvvitzby3ju5fwhnso9z8jujfh",
+    "price": "€15+",
+    "badgeColor": "green",
+    "tags": ["HarmonyOS", "Framework7", "Web Application", "Custom"]
+  }, 
+    {
+    "title": "Dreamflow",
+    "subtitle": "A collection of wallpapers where darkness meets design.",
+    "url": "https://techlxrd.gumroad.com/l/dreamflow?layout=profile",
+    "image": "https://public-files.gumroad.com/1npq9gkz4ftcbrnz46bvyd8vhukw",
+    "price": "Free",
+    "badgeColor": "green",
+    "tags": ["Wallpapers", "iPhone", "Android", "Dark", "Design"]
+  }, 
+    {
+    "title": "Noise",
+    "subtitle": "A beautiful and noisy wallpaper pack.",
+    "url": "https://techlxrd.gumroad.com/l/glass?layout=profile",
+    "image": "https://public-files.gumroad.com/rns6hkfwio871izkkfcqhgly2bgf",
+    "price": "€5+",
+    "badgeColor": "green",
+    "tags": ["Wallpapers", "iPhone", "Android", "Design"]
+  },
+      {
+    "title": "Glass",
+    "subtitle": "A beautiful and glassy wallpaper pack.",
+    "url": "https://techlxrd.gumroad.com/l/noise?layout=profile",
+    "image": "https://public-files.gumroad.com/bivthq0l7h9bl5j3m5a6adkzt9wt",
+    "price": "€3+",
+    "badgeColor": "green",
+    "tags": ["Wallpapers", "iPhone", "Android", "Design"]
+  }, 
+      {
+    "title": "Bloom",
+    "subtitle": "A beautiful floral wallpaper pack.",
+    "url": "https://techlxrd.gumroad.com/l/bloom?layout=profile",
+    "image": "https://public-files.gumroad.com/7b2vxa7d4ej4723r1u8kumqqzyr7",
+    "price": "€6+",
+    "badgeColor": "green",
+    "tags": ["Wallpapers", "iPhone", "Android", "Design"]
+  }
+]
